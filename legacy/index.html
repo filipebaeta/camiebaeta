@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Cami e Baeta</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/default.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <script>
+    var map;
+      function centraliza(){
+         var center = map.getCenter();
+         google.maps.event.trigger(map, "resize");
+         map.setCenter(center); 
+      }
+      function initialize() {
+        var myLatlng = new google.maps.LatLng(-22.961624,-43.165589);
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: myLatlng,
+          zoom: 18,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+      google.maps.event.addDomListener(window, 'resize', centraliza);
+    </script>
+  </head>
+  <body>
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Cami e Baeta</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="hero"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="section-divider text-center"></p>
+          <h2 class="text-center">Conheça o casal</h2>
+        </div>          
+      </div>
+
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-4 text-center">
+          <img src="img/profile-cami.jpg">
+          <h3 class="text-center">Camila Bouza</h3>
+          <p>We are dating, and I felt and still do fell, the happiest girl in the world. Jacob makes me feel so special and loved. You are the love of my life, my best friend. I don't think anybody could be happier than I am today.</p>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4 text-center">
+          <img src="img/profile-baeta.jpg">
+          <h3 class="text-center">Filipe Baeta</h3>
+          <p>We are dating, and I felt and still do fell, the happiest girl in the world. Jacob makes me feel so special and loved. You are the love of my life, my best friend. I don't think anybody could be happier than I am today.</p>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="jumbotron text-center countdown">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="section-divider text-center"></p>
+          <h2 class="text-center">Madrinhas e Padrinhos</h2>
+        </div> 
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-sm-6 text-right">
+              <h4>Barbra Dietzsch</h4>
+              <h4 class="subtitle cami">Cami's team</h4>
+              <p>Arquiteta incrivel, cheia de bom gosto e dona das melhores tiradas da língua culta portuguesa de todo o mundo, ela é o motivo de muitas das nossas risadas, amiga super companheira, sem a qual não vivemos sem!</p>
+            </div>
+            <div class="col-sm-6 text-center">
+              <div class="people-top cami"></div>
+              <img class="people" src="http://placehold.it/200x200">
+              <div class="people-bottom cami"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-sm-6 text-center">
+              <div class="people-top baeta"></div>
+              <img class="people" src="http://placehold.it/200x200">
+              <div class="people-bottom baeta"></div>
+            </div>
+            <div class="col-sm-6">
+              <h4>Aline Herrmann</h4>
+              <h4 class="subtitle baeta">Baeta's team</h4>
+              <p>Minha irmã que a vida me deu. Aquela amiga que você conta pra tudo, independente de tudo. Ela é parte da família que eu escolhi pra mim. Abraçou e participou do nascimento dessa união passinho por passinho. Cada dia queremos mais ela e Rafa pertinho da nossa vida.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-sm-6 text-right">
+              <h4>Germana Acioly</h4>
+              <h4 class="subtitle cami">Cami's team</h4>
+              <p>Arquiteta incrivel, cheia de bom gosto e dona das melhores tiradas da língua culta portuguesa de todo o mundo, ela é o motivo de muitas das nossas risadas, amiga super companheira, sem a qual não vivemos sem!</p>
+            </div>
+            <div class="col-sm-6 text-center">
+              <div class="people-top cami"></div>
+              <img class="people" src="http://placehold.it/200x200">
+              <div class="people-bottom cami"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-sm-6 text-center">
+              <div class="people-top baeta"></div>
+              <img class="people" src="http://placehold.it/200x200">
+              <div class="people-bottom baeta"></div>
+            </div>
+            <div class="col-sm-6">
+              <h4>Débora Magalhães</h4>
+              <h4 class="subtitle baeta">Baeta's team</h4>
+              <p>Minha irmã que a vida me deu. Aquela amiga que você conta pra tudo, independente de tudo. Ela é parte da família que eu escolhi pra mim. Abraçou e participou do nascimento dessa união passinho por passinho. Cada dia queremos mais ela e Rafa pertinho da nossa vida.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-sm-6 text-right">
+              <h4>Paola Rollas</h4>
+              <h4 class="subtitle cami">Cami's team</h4>
+              <p>Arquiteta incrivel, cheia de bom gosto e dona das melhores tiradas da língua culta portuguesa de todo o mundo, ela é o motivo de muitas das nossas risadas, amiga super companheira, sem a qual não vivemos sem!</p>
+            </div>
+            <div class="col-sm-6 text-center">
+              <div class="people-top cami"></div>
+              <img class="people" src="http://placehold.it/200x200">
+              <div class="people-bottom cami"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-sm-6 text-center">
+              <div class="people-top baeta"></div>
+              <img class="people" src="http://placehold.it/200x200">
+              <div class="people-bottom baeta"></div>
+            </div>
+            <div class="col-sm-6">
+              <h4>Luiz Felipe</h4>
+              <h4 class="subtitle baeta">Baeta's team</h4>
+              <p>Minha irmã que a vida me deu. Aquela amiga que você conta pra tudo, independente de tudo. Ela é parte da família que eu escolhi pra mim. Abraçou e participou do nascimento dessa união passinho por passinho. Cada dia queremos mais ela e Rafa pertinho da nossa vida.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-sm-6 text-right">
+              <h4>Patrick Zeiger</h4>
+              <h4 class="subtitle cami">Cami's team</h4>
+              <p>Arquiteta incrivel, cheia de bom gosto e dona das melhores tiradas da língua culta portuguesa de todo o mundo, ela é o motivo de muitas das nossas risadas, amiga super companheira, sem a qual não vivemos sem!</p>
+            </div>
+            <div class="col-sm-6 text-center">
+              <div class="people-top cami"></div>
+              <img class="people" src="http://placehold.it/200x200">
+              <div class="people-bottom cami"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-sm-6 text-center">
+              <div class="people-top baeta"></div>
+              <img class="people" src="http://placehold.it/200x200">
+              <div class="people-bottom baeta"></div>
+            </div>
+            <div class="col-sm-6">
+              <h4>Rafael Coelho</h4>
+              <h4 class="subtitle baeta">Baeta's team</h4>
+              <p>Minha irmã que a vida me deu. Aquela amiga que você conta pra tudo, independente de tudo. Ela é parte da família que eu escolhi pra mim. Abraçou e participou do nascimento dessa união passinho por passinho. Cada dia queremos mais ela e Rafa pertinho da nossa vida.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="map-canvas"></div>  
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-12">
+          <img class="gallery" src="img/gallery.jpg">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-12 friendsay text-center">
+          <h1>O que os amigos dizem...</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 rsvp text-center">
+          <h1>RSVP</h1>
+        </div>
+      </div>
+
+    </div>
+
+    <div 
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="//use.typekit.net/ucu8krg.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+  </body>
+</html>
